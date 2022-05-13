@@ -96,6 +96,8 @@ public class MainActivity extends AppCompatActivity {
         Log.d(TAG, "onRequestPermissionsResult");
         if (reqCode == REQ_PERMISSIONS) {
             startLocationUpdate(false);
+        } else {
+            super.onRequestPermissionsResult(reqCode, permissions, grants);
         }
     }
 }
